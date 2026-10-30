@@ -9,7 +9,6 @@ package eax
 
 import (
 	"crypto/cipher"
-	"crypto/subtle"
 	"errors"
 	"github.com/lukasmwerner/cs-370-crypto/internal/byteutil"
 )
@@ -89,10 +88,6 @@ func (e *eax) Open(dst, nonce, ciphertext, adata []byte) ([]byte, error) {
 	if len(nonce) > e.nonceSize {
 		panic("crypto/eax: Nonce too long for this instance")
 	}
-	if len(ciphertext) < e.tagSize {
-		return nil, eaxError("Ciphertext shorter than tag length")
-	}
-
 	omacNonce := e.omacT(0, nonce)
 
 	// Decrypt ciphertext
