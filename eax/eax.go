@@ -92,29 +92,15 @@ func (e *eax) Open(dst, nonce, ciphertext, adata []byte) ([]byte, error) {
 	if len(ciphertext) < e.tagSize {
 		return nil, eaxError("Ciphertext shorter than tag length")
 	}
-	sep := len(ciphertext) - e.tagSize
 
-	// Compute tag
 	omacNonce := e.omacT(0, nonce)
-	omacAdata := e.omacT(1, adata)
-	omacCiphertext := e.omacT(2, ciphertext[:sep])
-
-	tag := make([]byte, e.tagSize)
-	for i := 0; i < e.tagSize; i++ {
-		tag[i] = omacCiphertext[i] ^ omacNonce[i] ^ omacAdata[i]
-	}
-
-	// Compare tags
-	if subtle.ConstantTimeCompare(ciphertext[sep:], tag) != 1 {
-		return nil, eaxError("Tag authentication failed")
-	}
 
 	// Decrypt ciphertext
 	ret, out := byteutil.SliceForAppend(dst, len(ciphertext))
 	ctr := cipher.NewCTR(e.block, omacNonce)
-	ctr.XORKeyStream(out, ciphertext[:sep])
+	ctr.XORKeyStream(out, ciphertext)
 
-	return ret[:sep], nil
+	return ret, nil
 }
 
 // Tweakable OMAC - Calls OMAC_K([t]_n || plaintext)
