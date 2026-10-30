@@ -6,9 +6,9 @@ import (
 	"crypto/cipher"
 	"strconv"
 
-	"github.com/ProtonMail/go-crypto/eax"
-	"github.com/ProtonMail/go-crypto/ocb"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/eax"
+	"github.com/lukasmwerner/cs-370-crypto/ocb"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
 )
 
 // AEADMode defines the Authenticated Encryption with Associated Data mode of

@@ -7,7 +7,7 @@ package packet
 import (
 	"io"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
 )
 
 const aeadSaltSize = 32

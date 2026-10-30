@@ -6,8 +6,8 @@ import (
 	goerrors "errors"
 	"io"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/ecc"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/ecc"
 	"github.com/cloudflare/circl/sign"
 	"github.com/cloudflare/circl/sign/mldsa/mldsa65"
 	"github.com/cloudflare/circl/sign/mldsa/mldsa87"

@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/packet"
 )
 
 // A public key can carry a user ID whose self-signature is absent: for example

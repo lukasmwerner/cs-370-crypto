@@ -1,4 +1,4 @@
-module github.com/ProtonMail/go-crypto
+module github.com/lukasmwerner/cs-370-crypto
 
 go 1.23.0
 

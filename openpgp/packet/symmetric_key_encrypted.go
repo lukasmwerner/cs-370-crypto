@@ -11,8 +11,8 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/s2k"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/s2k"
 	"golang.org/x/crypto/hkdf"
 )
 

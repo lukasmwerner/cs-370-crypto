@@ -19,21 +19,21 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/ecdsa"
-	"github.com/ProtonMail/go-crypto/openpgp/ed25519"
-	"github.com/ProtonMail/go-crypto/openpgp/ed448"
-	"github.com/ProtonMail/go-crypto/openpgp/eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/elgamal"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/ecc"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/encoding"
-	"github.com/ProtonMail/go-crypto/openpgp/mldsa_eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/mlkem_ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/slhdsa"
-	"github.com/ProtonMail/go-crypto/openpgp/x25519"
-	"github.com/ProtonMail/go-crypto/openpgp/x448"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ecdh"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ecdsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ed25519"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ed448"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/eddsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/elgamal"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/algorithm"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/ecc"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/encoding"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/mldsa_eddsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/mlkem_ecdh"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/slhdsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/x25519"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/x448"
 	"github.com/cloudflare/circl/kem"
 	"github.com/cloudflare/circl/kem/mlkem/mlkem1024"
 	"github.com/cloudflare/circl/kem/mlkem/mlkem768"
@@ -1023,7 +1023,7 @@ func (pk *PublicKey) VerifySignature(signed hash.Hash, sig *Signature) (err erro
 	}
 	signed.Write(sig.HashSuffix)
 	hashBytes := signed.Sum(nil)
-	// see discussion https://github.com/ProtonMail/go-crypto/issues/107
+	// see discussion https://github.com/lukasmwerner/cs-370-crypto/issues/107
 	if sig.Version >= 5 && (hashBytes[0] != sig.HashTag[0] || hashBytes[1] != sig.HashTag[1]) {
 		return errors.SignatureError("hash tag doesn't match")
 	}

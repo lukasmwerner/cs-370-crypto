@@ -7,7 +7,7 @@
 //
 // Clearsigned messages are cryptographically signed, but the contents of the
 // message are kept in plaintext so that it can be read without special tools.
-package clearsign // import "github.com/ProtonMail/go-crypto/openpgp/clearsign"
+package clearsign // import "github.com/lukasmwerner/cs-370-crypto/openpgp/clearsign"
 
 import (
 	"bufio"
@@ -21,10 +21,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ProtonMail/go-crypto/openpgp"
-	"github.com/ProtonMail/go-crypto/openpgp/armor"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/armor"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/packet"
 )
 
 // A Block represents a clearsigned message. A signature on a Block can

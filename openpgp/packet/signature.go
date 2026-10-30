@@ -16,15 +16,15 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdsa"
-	"github.com/ProtonMail/go-crypto/openpgp/ed25519"
-	"github.com/ProtonMail/go-crypto/openpgp/ed448"
-	"github.com/ProtonMail/go-crypto/openpgp/eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/encoding"
-	"github.com/ProtonMail/go-crypto/openpgp/mldsa_eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/slhdsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ecdsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ed25519"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ed448"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/eddsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/algorithm"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/encoding"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/mldsa_eddsa"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/slhdsa"
 	"github.com/cloudflare/circl/sign/mldsa/mldsa65"
 	"github.com/cloudflare/circl/sign/mldsa/mldsa87"
 )
@@ -1379,7 +1379,7 @@ func (sig *Signature) buildSubpackets(config *Config) (subpackets []outputSubpac
 		keyId := make([]byte, 8)
 		binary.BigEndian.PutUint64(keyId, *sig.IssuerKeyId)
 		// Note: making this critical breaks RPM <=4.16.
-		// See: https://github.com/ProtonMail/go-crypto/issues/263
+		// See: https://github.com/lukasmwerner/cs-370-crypto/issues/263
 		subpackets = append(subpackets, outputSubpacket{true, issuerSubpacket, false, keyId})
 	}
 	// Notation Data

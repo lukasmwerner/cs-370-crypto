@@ -11,7 +11,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
 )
 
 func TestReadFull(t *testing.T) {

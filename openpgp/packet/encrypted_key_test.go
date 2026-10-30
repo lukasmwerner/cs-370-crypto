@@ -16,8 +16,8 @@ import (
 	"crypto"
 	"crypto/rsa"
 
-	"github.com/ProtonMail/go-crypto/openpgp/x25519"
-	"github.com/ProtonMail/go-crypto/openpgp/x448"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/x25519"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/x448"
 )
 
 func bigFromBase10(s string) *big.Int {

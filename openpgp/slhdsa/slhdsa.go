@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
 	"github.com/cloudflare/circl/sign"
 )
 

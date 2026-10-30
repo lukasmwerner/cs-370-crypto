@@ -14,13 +14,13 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/elgamal"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/encoding"
-	"github.com/ProtonMail/go-crypto/openpgp/mlkem_ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/x25519"
-	"github.com/ProtonMail/go-crypto/openpgp/x448"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/ecdh"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/elgamal"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/encoding"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/mlkem_ecdh"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/x25519"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/x448"
 )
 
 // EncryptedKey represents a public-key encrypted session key. See RFC 4880,

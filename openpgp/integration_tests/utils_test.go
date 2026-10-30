@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp"
-	"github.com/ProtonMail/go-crypto/openpgp/armor"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
-	"github.com/ProtonMail/go-crypto/openpgp/s2k"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/armor"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/packet"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/s2k"
 )
 
 // This function produces random test vectors: generates keys according to the

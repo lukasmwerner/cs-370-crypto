@@ -13,8 +13,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ProtonMail/go-crypto/openpgp"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/packet"
 )
 
 var allowAllAlgorithmsConfig = &packet.Config{

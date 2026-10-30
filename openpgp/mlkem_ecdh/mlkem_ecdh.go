@@ -9,9 +9,9 @@ import (
 
 	"golang.org/x/crypto/sha3"
 
-	"github.com/ProtonMail/go-crypto/openpgp/aes/keywrap"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/ecc"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/aes/keywrap"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/errors"
+	"github.com/lukasmwerner/cs-370-crypto/openpgp/internal/ecc"
 	"github.com/cloudflare/circl/kem"
 )
 
